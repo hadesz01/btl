@@ -99,3 +99,12 @@ C:\Users\thanh\Downloads\baiTAPlon\BTLCS\btlccc\BLL\bin\Debug\DTO.pdb
 C:\Users\thanh\Downloads\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\thanh\Downloads\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.dll
 C:\Users\thanh\Downloads\baiTAPlon\BTLCS\btlccc\BLL\obj\Debug\BLL.pdb
+C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\BLL.dll
+C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\BLL.pdb
+C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\DAL.dll
+C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\DTO.dll
+C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\DAL.pdb
+C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\DTO.pdb
+C:\Users\admin\Documents\re\btl\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\admin\Documents\re\btl\btlccc\BLL\obj\Debug\BLL.dll
+C:\Users\admin\Documents\re\btl\btlccc\BLL\obj\Debug\BLL.pdb

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+
 using DTO;
 using System.Data;
 
@@ -33,7 +34,18 @@ namespace BLL
 
             return pcgd.Them(x);
         }
-
+        public DataTable Malop(string sql)
+        {
+            return pcgd.HienThiDataLop(sql);
+        }
+        public DataTable MaMon(string sql)
+        {
+            return pcgd.HienThiDataMon(sql);
+        }
+        public DataTable MaCanBo(string sql)
+        {
+            return pcgd.HienThiDataGiaoVien(sql);
+        }
     }
 
 }

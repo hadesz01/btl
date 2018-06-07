@@ -21,6 +21,7 @@ namespace WindowsFormsApp15
 
         private void PhanCongGD_Load(object sender, EventArgs e)
         {
+            
             GiangDayPCDABLL cls = new GiangDayPCDABLL();
             dgvGiangday.DataSource = cls.HienThiDS();
             DataTable dt = new DataTable();
@@ -35,6 +36,9 @@ namespace WindowsFormsApp15
             cboGiaovien.DisplayMember = "HoTen";
             cboGiaovien.ValueMember = "MaCanBoGiaoVien";
             dgvGiangday.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            cboMon.Text = "";
+            cboLop.Text = "";
+            cboGiaovien.Text = "";
         }
 
         private void btnPhancong_Click(object sender, EventArgs e)
@@ -47,6 +51,28 @@ namespace WindowsFormsApp15
             x.NgayPhanCong = dateTimePicker1.Value;
             pcc.Phancong(x);
             PhanCongGD_Load(sender, e);
+        }
+
+        private void btnHien_Click(object sender, EventArgs e)
+        {
+            GiangDayPCDABLL show = new GiangDayPCDABLL();
+
+            if (cboMon.Text.Length > 0)
+            {
+                dgvGiangday.DataSource = show.MaMon(cboMon.Text);
+                cboMon.Text = "";
+
+            }
+            if (cboLop.Text.Length > 0)
+            {
+                dgvGiangday.DataSource = show.Malop(cboLop.Text);
+                cboLop.Text = "";
+            }
+            if (cboGiaovien.Text.Length > 0)
+            {
+                dgvGiangday.DataSource = show.MaCanBo(cboGiaovien.Text);
+                cboGiaovien.Text = "";
+            }
         }
     }
 }

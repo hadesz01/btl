@@ -54,6 +54,63 @@ namespace DAL
             return cmd.ExecuteNonQuery();
 
         }
+        public DataTable HienThiDataLop(string sql)
+        {
+            Open();
+            string select = "Select Lop.TenLop,MonHoc.TenMon,CanBoGiaoVien.HoTen,PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join Lop on Lop.MaLop=PhanCongGiangDay.MaLop inner join MonHoc on PhanCongGiangDay.MaMon=MonHoc.MaMon inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien=CanBoGiaoVien.MaCanBoGiaoVien where Lop.TenLop=@tenlop";
+            SqlCommand cmd = new SqlCommand(select, conn);
+            if (cmd.Connection.State == ConnectionState.Open)
+            {
+                cmd.Connection.Close();
+            }
+            cmd.Connection.Open();
+            cmd.Parameters.AddWithValue("tenlop", sql);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dr.Close();
+            cmd.Connection.Close();
+            return dt;
+
+        }
+        public DataTable HienThiDataMon(string sql)
+        {
+            Open();
+            string select = "Select Lop.TenLop,MonHoc.TenMon,CanBoGiaoVien.HoTen,PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join Lop on Lop.MaLop=PhanCongGiangDay.MaLop inner join MonHoc on PhanCongGiangDay.MaMon=MonHoc.MaMon inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien=CanBoGiaoVien.MaCanBoGiaoVien where MonHoc.TenMon=@tenmon";
+            SqlCommand cmd = new SqlCommand(select, conn);
+            if (cmd.Connection.State == ConnectionState.Open)
+            {
+                cmd.Connection.Close();
+            }
+            cmd.Connection.Open();
+            cmd.Parameters.AddWithValue("tenmon", sql);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dr.Close();
+            cmd.Connection.Close();
+            return dt;
+
+        }
+        public DataTable HienThiDataGiaoVien(string sql)
+        {
+            Open();
+            string select = "Select Lop.TenLop,MonHoc.TenMon,CanBoGiaoVien.HoTen,PhanCongGiangDay.NgayPhanCong from PhanCongGiangDay inner join Lop on Lop.MaLop=PhanCongGiangDay.MaLop inner join MonHoc on PhanCongGiangDay.MaMon=MonHoc.MaMon inner join CanBoGiaoVien on PhanCongGiangDay.MaCanBoGiaoVien=CanBoGiaoVien.MaCanBoGiaoVien where CanBoGiaoVien.HoTen=@tencanbo";
+            SqlCommand cmd = new SqlCommand(select, conn);
+            if (cmd.Connection.State == ConnectionState.Open)
+            {
+                cmd.Connection.Close();
+            }
+            cmd.Connection.Open();
+            cmd.Parameters.AddWithValue("tencanbo", sql);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dr.Close();
+            cmd.Connection.Close();
+            return dt;
+
+        }
     }
     }
 

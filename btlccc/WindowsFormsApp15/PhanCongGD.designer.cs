@@ -147,6 +147,7 @@
             this.btnHien.Text = "Hiển Thị";
             this.btnHien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHien.UseVisualStyleBackColor = false;
+            this.btnHien.Click += new System.EventHandler(this.btnHien_Click);
             // 
             // btnPhancong
             // 
