@@ -108,3 +108,14 @@ C:\Users\admin\Documents\re\btl\btlccc\BLL\bin\Debug\DTO.pdb
 C:\Users\admin\Documents\re\btl\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\admin\Documents\re\btl\btlccc\BLL\obj\Debug\BLL.dll
 C:\Users\admin\Documents\re\btl\btlccc\BLL\obj\Debug\BLL.pdb
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\BLL.dll
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\BLL.pdb
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\DAL.dll
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\DTO.dll
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\DAL.pdb
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\DAL.dll.config
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\bin\Debug\DTO.pdb
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\obj\Debug\BLL.dll
+C:\Users\Vinhl\Documents\GitHub\btl\btlccc\BLL\obj\Debug\BLL.pdb

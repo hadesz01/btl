@@ -115,7 +115,7 @@ namespace WindowsFormsApp15
             txtTim.ForeColor = Color.Gray;
         }
         //tao ra combo diem
-        
+
         List<string> hhhh = new List<string>() { "Tìm điểm", "Tìm hồ sơ" };
         homeDiem aa = new homeDiem(); // form thong tin
         //form load
@@ -299,7 +299,7 @@ namespace WindowsFormsApp15
 
 
 
-      
+
 
         //hien thi
         private string MamonLay = "";
@@ -322,6 +322,7 @@ namespace WindowsFormsApp15
         //gia tri luu dang o chuc nang nao
         private bool ACThem = false;
         private bool ACSua = false;
+        //kiem tra xem txt tim co thay doi hay khong 
         private bool tCK()
         {
             if (txtTim.Text == "Mã môn + Tên môn trong combobox :)) or Mã Hoc Sinh" || txtTim.ForeColor == Color.Gray)
@@ -332,8 +333,9 @@ namespace WindowsFormsApp15
         private void button1_Click_1(object sender, EventArgs e)
         {
             //combodiem.ComboBox.SelectedIndex = 0;
+            //neu ma tim theo combo
             if (tCK())
-            {
+            { //tim theo diem
                 if (cbdd.ComboBox.SelectedIndex == 0)
                 {
                     //kiem tra btn
@@ -375,9 +377,11 @@ namespace WindowsFormsApp15
 
 
             }
+            //tim theo ma
             if (!tCK())
 
             {
+                //tim theo ho so
                 if (cbdd.ComboBox.SelectedIndex == 1)
                 {
                     //kiem tra btn
@@ -414,6 +418,7 @@ namespace WindowsFormsApp15
                     // if(tCK())
                     Hths();
                 }
+                //tim theo diem 
                 if (cbdd.ComboBox.SelectedIndex == 0)
                 {
                     //tim theo diem hoc sinh
@@ -470,12 +475,14 @@ namespace WindowsFormsApp15
 
 
                         }
+                        //khong tim thay 
                         if (!ggg)
                             MessageBox.Show("Không tìm thấy học sinh có mã +" + txtTim.Text, "null", MessageBoxButtons.OK,
                                    MessageBoxIcon.Warning);
 
 
                     }
+                    //neu sua dang mo
                     if (ACSua)
                     {
                         button3_Click(null, null);
@@ -497,6 +504,7 @@ namespace WindowsFormsApp15
                                    MessageBoxIcon.Warning);
 
                     }
+                    //neu them dang mo
                     else if (ACThem)
                     {
                         button2_Click(null, null);
@@ -530,6 +538,7 @@ namespace WindowsFormsApp15
 
         //
         private List<string> mhs = new List<string>();
+        //lay ma hoc sinh hoc ma lop duoc chon 
         private void lay()
         {
             //List<string> mhs = new List<string>();
@@ -550,18 +559,24 @@ namespace WindowsFormsApp15
         }
         private void Hths()
         {
+            //lay ma hoc sinh  trong danh sach ma lop duoc chon 
             lay();
             bool g = false;
+            //ds hs trong danh sach tat ca hoc sinh
             foreach (var hs in ql.dsHs())
             {
 
-
+                // hoc sinh ca duoc lay ra theo ma  lop duoc chon 
                 foreach (var item in mhs)
                 {
+                    // tim hs co ma trong danh sach mhs
                     if (hs.MaHocSinh == item)
                     {
+                        //kiem tra xem ma hoc sinh nhap vao co giong voi ma hoc sinh trong txt tim khong 
                         if (item == txtTim.Text)
                         {
+                            // hien thi len data gridview tim theo ho so 
+                            //lay ho so hoc sinh ra
                             DataGridViewRow row = (DataGridViewRow)dataGridView4.Rows[STT].Clone();
                             row.Cells[0].Value = hs.MaHocSinh.ToString();
                             row.Cells[1].Value = hs.HoTen;
@@ -599,8 +614,10 @@ namespace WindowsFormsApp15
 
         }
         //enable cell input data
+        //cho phep nhap diem , 
         private void ENA()
         {
+            //kiem tra xem da co hoc sinh nao chua
             if (dataGridView1.Rows.Count == 1)
             {
                 MessageBox.Show("Chưa có HỌC SINH làm sao mà nhập điểm  !!! Có thể cần cập nhật", "");
@@ -713,8 +730,15 @@ namespace WindowsFormsApp15
                 {
                     foreach (int item in dongSua2)
                     {
-                        bool ck = ql.ThemDiem2(MaHocSinhsuadiem2[j], MamonLay, dataGridView1.Rows[item].Cells[4].Value.ToString());
-
+                        bool ck = false;
+                        try
+                        {
+                             ck = ql.ThemDiem2(MaHocSinhsuadiem2[j], MamonLay, dataGridView1.Rows[item].Cells[4].Value.ToString());
+                        }
+                        catch (Exception ex)
+                        {
+                            ck = false;
+                        }
                         j++;
                         if (!ck)
                         {
@@ -748,7 +772,7 @@ namespace WindowsFormsApp15
                     }
                     catch (Exception ex)
                     { }
-                    
+
 
                     //  btnLuu.Enabled = false;
 
@@ -862,7 +886,7 @@ namespace WindowsFormsApp15
             foreach (Control item in pnDiem.Controls.OfType<DataGridView>())
             {
                 item.Dock = DockStyle.None;
-                item.Visible = false;               
+                item.Visible = false;
             }
             pnDiem.Controls.Add(aa);
             aa.Dock = DockStyle.Fill;
@@ -880,12 +904,12 @@ namespace WindowsFormsApp15
                 item.Visible = false;
             }
             LoaiBoFormThongTin();
-           
+
             Name.Visible = true;
             Name.Dock = DockStyle.Fill;
-           
+
         }
-       
+
 
         private void Hienthidata2()
         {
@@ -1054,7 +1078,7 @@ namespace WindowsFormsApp15
         private void saveToolStripButton_Click_1(object sender, EventArgs e)
         {
             Refresh();
-            button4_Click(null,null);
+            button4_Click(null, null);
 
         }
         //tro ve font cu
@@ -1185,7 +1209,7 @@ namespace WindowsFormsApp15
             }
         }
 
-  
+
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
@@ -1197,7 +1221,7 @@ namespace WindowsFormsApp15
             ThayFont();
         }
 
-     
+
 
         private void txtTim_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1207,7 +1231,7 @@ namespace WindowsFormsApp15
         //goi sukien button them click
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            button2_Click(null,null);
+            button2_Click(null, null);
         }
 
 
@@ -1229,7 +1253,7 @@ namespace WindowsFormsApp15
 
                     MessageBox.Show("Thành công ", "");
                 }
-              
+
 
             }
             else
@@ -1238,7 +1262,7 @@ namespace WindowsFormsApp15
         bool ff = false;
         private void backgroundWorker3_DoWork(object sender, DoWorkEventArgs e)
         {
-            for (int i = 0; i <= 100; i ++)
+            for (int i = 0; i <= 100; i++)
             {
                 int per = i * 100 / 100;
                 //backgroundWorker3.ReportProgress(per, i);
@@ -1283,10 +1307,10 @@ namespace WindowsFormsApp15
         //goi su kien button sua click
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            button3_Click(null,null);
+            button3_Click(null, null);
         }
 
-      
+
 
         private void helpToolStripButton_Click_1(object sender, EventArgs e)
         {
@@ -1308,7 +1332,7 @@ namespace WindowsFormsApp15
 
             }
         }
-      
+
 
         //tu dong insert
         private bool km = true;
