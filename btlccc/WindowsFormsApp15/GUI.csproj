@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +67,21 @@
     </Compile>
     <Compile Include="diemdialog.Designer.cs">
       <DependentUpon>diemdialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsGiaoVien.cs">
+      <DependentUpon>dsGiaoVien.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsGiaoVien.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGiaoVien.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportGiaoVien.Designer.cs">
+      <DependentUpon>frmReportGiaoVien.cs</DependentUpon>
     </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
@@ -169,6 +187,9 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportGiaoVien.resx">
+      <DependentUpon>frmReportGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +233,7 @@
     <EmbeddedResource Include="QuanLyMonHoc.resx">
       <DependentUpon>QuanLyMonHoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ThongKeGV.resx">
       <DependentUpon>ThongKeGV.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +241,17 @@
       <DependentUpon>ThongKeHS.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="dsGiaoVien.xsc">
+      <DependentUpon>dsGiaoVien.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiaoVien.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGiaoVien.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGiaoVien.xss">
+      <DependentUpon>dsGiaoVien.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

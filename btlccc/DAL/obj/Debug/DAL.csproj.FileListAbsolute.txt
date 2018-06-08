@@ -102,3 +102,10 @@ G:\Code\git\btl\btlccc\DAL\bin\Debug\DTO.pdb
 G:\Code\git\btl\btlccc\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 G:\Code\git\btl\btlccc\DAL\obj\Debug\DAL.dll
 G:\Code\git\btl\btlccc\DAL\obj\Debug\DAL.pdb
+D:\Virtual\btl\btlccc\DAL\bin\Debug\DAL.dll
+D:\Virtual\btl\btlccc\DAL\bin\Debug\DAL.pdb
+D:\Virtual\btl\btlccc\DAL\bin\Debug\DTO.dll
+D:\Virtual\btl\btlccc\DAL\bin\Debug\DTO.pdb
+D:\Virtual\btl\btlccc\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Virtual\btl\btlccc\DAL\obj\Debug\DAL.dll
+D:\Virtual\btl\btlccc\DAL\obj\Debug\DAL.pdb

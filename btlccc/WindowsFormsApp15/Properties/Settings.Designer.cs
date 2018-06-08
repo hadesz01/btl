@@ -22,5 +22,16 @@ namespace WindowsFormsApp15.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RHCNQK0\\SQLEXPRESS;Initial Catalog=QUANLYHS;Integrated Securi" +
+            "ty=True")]
+        public string QUANLYHSConnectionString {
+            get {
+                return ((string)(this["QUANLYHSConnectionString"]));
+            }
+        }
     }
 }

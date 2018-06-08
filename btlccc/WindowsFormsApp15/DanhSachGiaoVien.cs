@@ -18,13 +18,16 @@ namespace WindowsFormsApp15
         {
             InitializeComponent();
         }
-
+        public static string str;
         private void DanhSachGiaoVien_Load(object sender, EventArgs e)
         {
             DanhSachGVBUL cls = new DanhSachGVBUL();
             cboTenLop.DataSource = cls.LayMaLop();
             cboTenLop.DisplayMember = "TenLop";
             cboTenLop.ValueMember = "MaLop";
+            txtTenTruong.Text = "Trường THPT Lương Thế Vinh";
+
+            txtNgay.Text = DateTime.Now.ToString("dd/MM/yyyy-HH:mm"); 
         }
 
         private void btnOk_Click(object sender, EventArgs e)
@@ -34,6 +37,17 @@ namespace WindowsFormsApp15
             x.MaLop = cboTenLop.SelectedValue.ToString();
             dgvDSGV.DataSource = cls.HienThiDS(x);
             dgvDSGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            str = cboTenLop.SelectedValue.ToString();
+        }
+
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            frmReportGiaoVien frm = new frmReportGiaoVien();
+            frm.ShowDialog();
+        }
+        public string getMaLop()
+        {
+            return str;
         }
     }
 }

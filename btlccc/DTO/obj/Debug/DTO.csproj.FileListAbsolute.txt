@@ -56,3 +56,8 @@ G:\Code\git\btl\btlccc\DTO\bin\Debug\DTO.pdb
 G:\Code\git\btl\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 G:\Code\git\btl\btlccc\DTO\obj\Debug\DTO.dll
 G:\Code\git\btl\btlccc\DTO\obj\Debug\DTO.pdb
+D:\Virtual\btl\btlccc\DTO\bin\Debug\DTO.dll
+D:\Virtual\btl\btlccc\DTO\bin\Debug\DTO.pdb
+D:\Virtual\btl\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\Virtual\btl\btlccc\DTO\obj\Debug\DTO.dll
+D:\Virtual\btl\btlccc\DTO\obj\Debug\DTO.pdb
