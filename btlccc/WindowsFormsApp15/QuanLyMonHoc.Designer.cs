@@ -41,7 +41,6 @@
             this.btnXem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnTaiLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -151,7 +150,6 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.btnTaiLai);
             this.groupBox1.Controls.Add(this.txtMaMon);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnXem);
@@ -179,17 +177,6 @@
             this.label4.Size = new System.Drawing.Size(296, 36);
             this.label4.TabIndex = 13;
             this.label4.Text = "QUẢN LÝ MÔN HỌC";
-            // 
-            // btnTaiLai
-            // 
-            this.btnTaiLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTaiLai.Location = new System.Drawing.Point(675, 222);
-            this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(75, 32);
-            this.btnTaiLai.TabIndex = 12;
-            this.btnTaiLai.Text = "Tải Lại";
-            this.btnTaiLai.UseVisualStyleBackColor = true;
-            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // QuanLyMonHoc
             // 
@@ -225,6 +212,5 @@
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnTaiLai;
     }
 }

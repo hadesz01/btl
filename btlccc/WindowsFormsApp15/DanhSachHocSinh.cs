@@ -24,8 +24,7 @@ namespace WindowsFormsApp15
             DanhSachHocSinhBUL cls = new DanhSachHocSinhBUL();
             cboTenLop.DataSource = cls.LayMaLop();
             cboTenLop.DisplayMember = "TenLop";
-            cboTenLop.ValueMember = "MaLop";
-            txtTenTruong.Text = "Trường ĐHCNHN";
+            cboTenLop.ValueMember = "MaLop";            
             dgvDSHS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 

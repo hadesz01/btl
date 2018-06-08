@@ -31,8 +31,11 @@ namespace WindowsFormsApp15
             x.MaMon = txtMaMon.Text;
             x.TenMon = txtTenMon.Text;
             x.SoTiet = int.Parse(txtSoTiet.Text);
-            MessageBox.Show("Bạn có muốn Lưu không?", "Lưu", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            cls.Them(x);
+            DialogResult dlr = MessageBox.Show("Bạn có muốn Thêm không?", "Thêm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dlr == DialogResult.OK)
+            {
+                cls.Them(x);
+            }
             QuanLyMonHoc_Load(sender, e);
         }
 
@@ -43,7 +46,11 @@ namespace WindowsFormsApp15
             x.MaMon = txtMaMon.Text;
             x.TenMon = txtTenMon.Text;
             x.SoTiet = int.Parse(txtSoTiet.Text);
-            cls.Sua(x);
+            DialogResult dlr = MessageBox.Show("Bạn có muốn Sửa không?", "Sửa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dlr == DialogResult.OK)
+            {
+                cls.Sua(x);
+            }
             QuanLyMonHoc_Load(sender, e);
         }
 
@@ -52,7 +59,11 @@ namespace WindowsFormsApp15
             QuanLyMonBUL cls = new QuanLyMonBUL();
             MonHoc x = new MonHoc();
             x.MaMon = txtMaMon.Text;
-            cls.Xoa(x);
+            DialogResult dlr = MessageBox.Show("Bạn có muốn Xóa không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
+            {
+                cls.Xoa(x);
+            }
             QuanLyMonHoc_Load(sender, e);
         }
 
@@ -62,11 +73,10 @@ namespace WindowsFormsApp15
             MonHoc x = new MonHoc();
             x.MaMon = txtMaMon.Text;
             dgvMonHoc.DataSource = cls.Xem(x);
-        }
-
-        private void btnTaiLai_Click(object sender, EventArgs e)
-        {
-            QuanLyMonHoc_Load(sender, e);
+            if (txtMaMon.Text == "")
+            {
+                QuanLyMonHoc_Load(sender, e);
+            }
         }
     }
 }

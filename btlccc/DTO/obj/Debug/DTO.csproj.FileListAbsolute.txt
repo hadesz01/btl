@@ -51,3 +51,8 @@ C:\Users\Vinhl\Documents\GitHub\btl\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemb
 C:\Users\Vinhl\Documents\GitHub\btl\btlccc\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\Vinhl\Documents\GitHub\btl\btlccc\DTO\obj\Debug\DTO.dll
 C:\Users\Vinhl\Documents\GitHub\btl\btlccc\DTO\obj\Debug\DTO.pdb
+G:\Code\git\btl\btlccc\DTO\bin\Debug\DTO.dll
+G:\Code\git\btl\btlccc\DTO\bin\Debug\DTO.pdb
+G:\Code\git\btl\btlccc\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+G:\Code\git\btl\btlccc\DTO\obj\Debug\DTO.dll
+G:\Code\git\btl\btlccc\DTO\obj\Debug\DTO.pdb

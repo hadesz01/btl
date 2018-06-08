@@ -20,7 +20,7 @@ namespace WindowsFormsApp15
 
         private void QuanLyLop_Load(object sender, EventArgs e)
         {
-            QuanLyLopBUL cls = new QuanLyLopBUL() ;
+            QuanLyLopBUL cls = new QuanLyLopBUL();
             dgvLop.DataSource = cls.HienThi();
             DataTable dt = new DataTable();
             dt.Columns.Add("magvcn", typeof(string));
@@ -45,7 +45,11 @@ namespace WindowsFormsApp15
             x.NienKhoa = txtNienKhoa.Text;
             x.SiSo = int.Parse(txtSiSo.Text);
             x.GiaoVienChuNhiem = cboGVCN.SelectedValue.ToString();
-            cls.Them(x);
+            DialogResult dlr = MessageBox.Show("Bạn có muốn Thêm không?", "Thêm", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dlr == DialogResult.OK)
+            {
+                cls.Them(x);
+            }
             QuanLyLop_Load(sender, e);
         }
 
@@ -58,7 +62,11 @@ namespace WindowsFormsApp15
             x.NienKhoa = txtNienKhoa.Text;
             x.SiSo = int.Parse(txtSiSo.Text);
             x.GiaoVienChuNhiem = cboGVCN.SelectedValue.ToString();
-            cls.Sua(x);
+            DialogResult dlr = MessageBox.Show("Bạn có muốn Sửa không?", "Sửa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dlr == DialogResult.OK)
+            {
+                cls.Sua(x);
+            }
             QuanLyLop_Load(sender, e);
         }
 
@@ -67,7 +75,11 @@ namespace WindowsFormsApp15
             QuanLyLopBUL cls = new QuanLyLopBUL();
             Lop x = new Lop();
             x.MaLop = txtMaLop.Text;
-            cls.Xoa(x);
+            DialogResult dlr = MessageBox.Show("Bạn có muốn Xóa không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dlr == DialogResult.Yes)
+            {
+                cls.Xoa(x);
+            }
             QuanLyLop_Load(sender, e);
         }
 
@@ -77,12 +89,10 @@ namespace WindowsFormsApp15
             Lop x = new Lop();
             x.MaLop = txtMaLop.Text;
             dgvLop.DataSource = cls.Xem(x);
+            if (txtMaLop.Text == "")
+            {
+                QuanLyLop_Load(sender, e);
+            }
         }
-
-        private void btnTaiLai_Click(object sender, EventArgs e)
-        {
-            QuanLyLop_Load(sender, e);
-        }
-
     }
 }

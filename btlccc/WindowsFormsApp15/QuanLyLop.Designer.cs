@@ -45,7 +45,6 @@
             this.txtNienKhoa = new System.Windows.Forms.TextBox();
             this.dgvLop = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnTaiLai = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLop)).BeginInit();
             this.SuspendLayout();
@@ -170,7 +169,6 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.btnTaiLai);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtNienKhoa);
             this.groupBox1.Controls.Add(this.btnXem);
@@ -231,17 +229,6 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "QUẢN LÝ LỚP HỌC";
             // 
-            // btnTaiLai
-            // 
-            this.btnTaiLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTaiLai.Location = new System.Drawing.Point(695, 241);
-            this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(75, 32);
-            this.btnTaiLai.TabIndex = 14;
-            this.btnTaiLai.Text = "Tải Lại";
-            this.btnTaiLai.UseVisualStyleBackColor = true;
-            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
-            // 
             // QuanLyLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -280,7 +267,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNienKhoa;
-        private System.Windows.Forms.Button btnTaiLai;
     }
 }
 
