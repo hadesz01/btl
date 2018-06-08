@@ -73,7 +73,7 @@ namespace WindowsFormsApp15
                 this.Hide();
             }
             else
-                MessageBox.Show("sai tai khoan or mat khau ", "");
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu ", "");
         }
     }
 }
