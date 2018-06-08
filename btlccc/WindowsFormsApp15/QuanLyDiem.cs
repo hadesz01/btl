@@ -706,14 +706,22 @@ namespace WindowsFormsApp15
                 int i = 0; bool t = true;
                 foreach (int item in dongSua1)
                 {
-                    bool ck = ql.ThemDiem1(MaHocSinhsuadiem1[i], MamonLay, dataGridView1.Rows[item].Cells[3].Value.ToString());
+                    bool ck = false;
+                    try
+                    {
+                         ck = ql.ThemDiem1(MaHocSinhsuadiem1[i], MamonLay, dataGridView1.Rows[item].Cells[3].Value.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                        ck = false;
+                    }
                     i++;
                     if (!ck)
                     {
                         MessageBox.Show("Thêm thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         t = false;
                         /// dataGridView1.Rows[item].Selected = true;
-
+                        button2_Click(null, null);
                         break;
 
                     }
@@ -722,7 +730,7 @@ namespace WindowsFormsApp15
                 if (!t)
                 {
                     dataGridView1.Refresh();
-                    dataGridView1.CurrentCell = dataGridView1[3, i];
+                  //  dataGridView1.CurrentCell = dataGridView1[3, i];
                     return;
                 }
                 int j = 0;
@@ -744,7 +752,7 @@ namespace WindowsFormsApp15
                         {
                             MessageBox.Show("Thêm thất bại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             t = false;
-
+                            button2_Click(null, null);
                             break;
 
                         }
@@ -754,7 +762,7 @@ namespace WindowsFormsApp15
                 if (!t)
                 {
                     dataGridView1.Refresh();
-                    dataGridView1.CurrentCell = dataGridView1[4, j];
+                   // dataGridView1.CurrentCell = dataGridView1[4, j];
                 }
                 if (t)
                 {
